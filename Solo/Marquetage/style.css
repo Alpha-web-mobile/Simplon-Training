@@ -1,0 +1,300 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* ---------------------------------------------------
+   🎀 Header
+---------------------------------------------------- */
+.header {
+  background: #d9d3d3;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e1bfbf;
+
+}
+
+/* ---------------------------------------------------
+   📌 Navbar
+---------------------------------------------------- */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+   height:50px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  top: 0px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* ---------------------------------------------------
+   🌸 Bannière principale
+---------------------------------------------------- */
+.banner {
+  width:100%;
+  height: 684px;
+  background-image: url("./lush-resources/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.banner-text{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+.big-title {
+  font-size: 3.125rem; 
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+    width: 70%; 
+  text-align: center;
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* End Banner */
+
+/* Structure principale*/
+main {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* ---------------------------------------------------
+   📄 Section Article
+---------------------------------------------------- */
+.container-article {
+    max-width: 1200px;
+    height: 578px;
+    padding: 2rem 0;
+    margin: 20px auto;
+    gap:10px;
+}
+
+.article-intro-text {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+}
+
+/* Colonnes de l'article */
+.left,
+.right {
+  flex: 1; 
+  padding: 1rem;
+}
+
+
+/* Section Articles */
+
+.articles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Style individuel des articles */
+article {
+  flex: 1 1 200px; 
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Article en fond vert */
+.bg-green {
+  background-color: #337A5B; 
+  color: #fff;
+}
+
+
+/* Footer - Zone de contact */
+
+footer {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  color: #333;
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.contact {
+  max-width:100%;
+    height: 200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  background:url("./lush-resources/newsletter-background.png");
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-top label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-top input[type="text"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.footer-top button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.footer-top button:hover {
+  background-color: #276428;
+}
+
+/* ---------------------------------------------------
+   ℹ️ Footer - Section infos / réseaux
+---------------------------------------------------- */
+.infos {
+  display: flex;
+  height: 200px;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  background:url("./lush-resources/footer-background.png");
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-position:center;
+}
+
+.infos span {
+
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .article-intro-text {
+    flex-direction: column;
+  }
+
+  .articles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    max-width: 90%;
+  }
+
+  .infos {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+
+
