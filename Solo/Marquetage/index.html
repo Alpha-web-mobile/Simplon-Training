@@ -12,9 +12,9 @@
     <nav class="navbar">
       <img src="./lush-resources/lush-logo.png" alt="Logo Lush" class="logo-img">
       <ul class="list">
-        <li class="element"><a href="#">Home</li>
+        <li class="element"><a href="#">Home</a></li>
         <li class="element"><a href="#">About US</a></li>
-         <li class="element"><a href="#">Planters</a></li>
+        <li class="element"><a href="#">Planters</a></li>
         <li class="element"><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -71,14 +71,19 @@
   <footer>
     <section class="contact">
       <div class="footer-top">
-        <form>
-          <label for="contact">
-            Entrez votre adresse email pour recevoir nos promotions et autres actualités intéressantes :
-          </label>
-          <input type="email" id="contact" name="contact" placeholder="exemple@email.com" required>
-          <button id="submited">S'inscrire</button>
+        <form class="form">
+          <div>
+            <label for="contact" style="width: 200px; text-align:left;">
+              Enter your email address for our mailing Promo or other interesting things
+            </label>
+          </div>
+          <div class="input">
+            <input type="email" id="contact" name="contact" placeholder="exemple@email.com" required>
+            <button type="submit" id="submited">Submit</button>
+          </div>
         </form>
       </div>
+
       <div class="footer-bottom">
         <!-- Tu peux ajouter tes mentions légales ici -->
       </div>
@@ -86,12 +91,20 @@
 
     <section class="infos">
       <span>
-        <img src="./lush-resources/social-facebook.png" alt="facebook"/>
+        <a href="#">
+          <img src="./lush-resources/social-facebook.png" alt="facebook"/>
+        </a>
       </span>
       <span>
-         <img src="./lush-resources/social-instagram.png" alt="social-instagram"/>
+        <a href="#">
+          <img src="./lush-resources/social-instagram.png" alt="social-instagram"/>
+        </a>
       </span>
-      <span> <img src="./lush-resources/social-twitterx.png" alt="facebook"/></span>
+      <span>
+        <a href="#">
+          <img src="./lush-resources/social-twitterx.png" alt="twitter"/>
+        </a>
+      </span>
     </section>
   </footer>
 </body>

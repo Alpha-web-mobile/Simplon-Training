@@ -35,7 +35,6 @@ a {
 }
 
 button,
-input,
 select,
 textarea {
   font: inherit;
@@ -44,30 +43,35 @@ textarea {
   outline: none;
 }
 
-/* ---------------------------------------------------
-   🎀 Header
----------------------------------------------------- */
+/* Header */
 .header {
-  background: #d9d3d3;
-  padding: 2rem;
+  background: #ffffff;
   text-align: center;
   border-bottom: 1px solid #e1bfbf;
-
 }
 
-/* ---------------------------------------------------
-   📌 Navbar
----------------------------------------------------- */
+/* Navbar */
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
-   height:50px;
+  height: 50px;
   margin: 0 auto;
   padding: 1rem 2rem;
-  top: 0px;
+  top: 0;
+}
+
+.logo-img {
+  color: #000;
+  background-color: #337a5b;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list {
@@ -76,135 +80,143 @@ textarea {
   gap: 1rem;
 }
 
-/* ---------------------------------------------------
-   🌸 Bannière principale
----------------------------------------------------- */
+/* Bannière principale */
 .banner {
-  width:100%;
+  width: 100%;
   height: 684px;
   background-image: url("./lush-resources/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  justify-content:center;
   align-items: center;
 }
-.banner-text{
-    display: flex;
-    align-items: center;
-    gap:2rem;
-    flex-direction: column;
-    text-align: center;
-    color: #fff;
+.banner-text {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap:1rem;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
 }
+
 .big-title {
-  font-size: 3.125rem; 
+  font-size: 4.125rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   text-align: center;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .description {
-    width: 70%; 
+  width:70%;
   text-align: center;
-  font-size: 1.125rem;
-  color: #666;
-  margin-bottom: 2rem;
+ 
+  color: #fff;
+
 }
 
-/* End Banner */
-
-/* Structure principale*/
+/* Structure principale */
 main {
   width: 100%;
   background-color: #fff;
 }
 
-/* ---------------------------------------------------
-   📄 Section Article
----------------------------------------------------- */
+/* Section Article */
 .container-article {
-    max-width: 1200px;
-    height: 578px;
-    padding: 2rem 0;
-    margin: 20px auto;
-    gap:10px;
+  max-width: 1200px;
+  height: 578px;
+  padding: 2rem 0;
+  margin: 20px auto;
+  gap: 10px;
 }
 
 .article-intro-text {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
-
+  gap: 2.5rem;
 }
 
-/* Colonnes de l'article */
 .left,
 .right {
-  flex: 1; 
+  flex: 1;
   padding: 1rem;
 }
 
-
-/* Section Articles */
-
+/* Articles */
 .articles {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 2rem;
 }
+.second-title{
+    width: 350px;
+    text-transform: capitalize;
+}
 
-/* Style individuel des articles */
 article {
-  flex: 1 1 200px; 
+  flex: 1 1 200px;
   max-width: 250px;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Article en fond vert */
 .bg-green {
-  background-color: #337A5B; 
+  background-color: #337a5b;
   color: #fff;
 }
 
-
 /* Footer - Zone de contact */
-
 footer {
   background-color: #f0f0f0;
-  padding: 2rem;
-  color: #333;
   font-size: 1rem;
   border-top: 1px solid #ccc;
 }
 
 .contact {
-  max-width:100%;
-    height: 200px;
+  width: 100%;
+  height: 200px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  background:url("./lush-resources/newsletter-background.png");
-  background-repeat: no-repeat;
-   background-size: cover;
-   background-position:center center;
+  background: url("./lush-resources/newsletter-background.png") no-repeat center center;
+  background-size: cover;
+  object-fit: contain;
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
+  padding: 35px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+label {
+  text-align: center;
 }
 
 .footer-top label {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
 }
 
 .footer-top input[type="text"] {
@@ -212,6 +224,13 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 300px;
+}
+
+input {
+  height: 50px;
+  width: 250px;
+  text-align: left;
+  padding: 10px;
 }
 
 .footer-top button {
@@ -228,42 +247,46 @@ footer {
   background-color: #276428;
 }
 
-/* ---------------------------------------------------
-   ℹ️ Footer - Section infos / réseaux
----------------------------------------------------- */
+/* Footer Infos */
 .infos {
   display: flex;
   height: 200px;
   gap: 1rem;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   border-top: 1px solid #ddd;
-  background:url("./lush-resources/footer-background.png");
-  background-repeat: no-repeat;
-   background-size: cover;
-   background-position:center;
+  background: url("./lush-resources/footer-background.png") no-repeat center;
+  background-size: cover;
+  /* object-fit: contain; */
+
 }
 
 .infos span {
-
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.875rem;
 }
 
-
-
-
+/* Responsive */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
   }
 
+  .logo-img {
+    margin-top: -30px;
+  }
+
   .list {
     flex-direction: column;
     gap: 0.5rem;
+    display: none;
+  }
+
+  .container-article {
+    height: 100%;
   }
 
   .article-intro-text {
@@ -294,7 +317,18 @@ footer {
     font-size: 1rem;
     padding: 0 1rem;
   }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px auto;
+  }
+
+  .footer-top input[type="text"] {
+    width: 80%;
+  }
+
+  .footer-top button {
+    width: auto;
+  }
 }
-
-
-
